@@ -27,13 +27,14 @@ function mintNFT (name,weight , age, phone_number) {
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
 function listNFTs () {
-    allnft.forEach((nft, index) => {
-        console.log(`NFT ${index + 1}`);
-        console.log("Name: " + nft.name);
-        console.log("Weight: " + nft.weight);
-        console.log("Age " + nft.age);
-        console.log("Phone Number " + nft.phone_number);
-    });
+    for (let i = 0; i < allnft.length; i++) { 
+        console.log("Name: " + allnft[i].name);
+        console.log("Weight: " + allnft[i].weight);
+        console.log("Age " + allnft[i].age);
+        console.log("Phone Number " + allnft[i].phone_number );
+        console.log("    ");
+
+    };
 }
 
 // print the total number of NFTs we have minted to the console
@@ -45,6 +46,9 @@ function getTotalSupply() {
 mintNFT("Kushagar", 80, 20, 9512365478);
 mintNFT("Aananya", 47, 19, 8456321458);
 mintNFT("Sakshi", 55, 19, 9245865542);
+mintNFT("Abhijit", 48, 22, 9841552542);
+
+
 
 listNFTs();
 console.log("Total NFTs: " + getTotalSupply());
